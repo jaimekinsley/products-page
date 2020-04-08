@@ -5,7 +5,7 @@ import { renderLineItem } from '../cart/render-line-items.js';
 
 
 const tbody = document.getElementById('checkout-table');
-console.log(tbody);
+
 const orderTotalCell = document.getElementById('order-total-cell');
 
 for (let i = 0; i < cart.length; i++){
@@ -18,5 +18,3 @@ for (let i = 0; i < cart.length; i++){
 const orderTotal = calcOrderTotal(cart, flowers);
 orderTotalCell.textContent = `$${orderTotal.toFixed(2)}`;
 
-console.log(orderTotal);
-console.log(orderTotalCell);
