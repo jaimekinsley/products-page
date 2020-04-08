@@ -15,12 +15,12 @@ function renderFlowers(flowers){
     li.append(pDescription);
 
     const pCategory = document.createElement('p');
-    pCategory.textContent = flowers.category;
+    pCategory.textContent = `Category: ${flowers.category}`;
     li.append(pCategory);
 
     const pPrice = document.createElement('p');
     const flowerPrice = flowers.price;
-    const fixedPrice = `$${flowerPrice.toFixed(2)}`;
+    const fixedPrice = `Price: $${flowerPrice.toFixed(2)}`;
     pPrice.textContent = fixedPrice; 
     li.append(pPrice);
 
@@ -45,7 +45,7 @@ function renderFlowers(flowers){
         if (!lineItem) {
             lineItem = {
                 id: flowers.id,
-                quantity:1
+                quantity: 1
             };
 
             cart.push(lineItem);
@@ -53,7 +53,7 @@ function renderFlowers(flowers){
         else {
             lineItem.quantity++;
         }
-console.log(lineItem.quantity);
+// console.log(lineItem.quantity);
 
         json = JSON.stringify(cart);
         localStorage.setItem('CART', json);
