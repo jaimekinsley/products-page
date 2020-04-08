@@ -19,3 +19,15 @@ export function calcLineTotal(quantity, price){
 function roundCurrency(lineTotal) {
     return Math.round(lineTotal * 100) / 100;
 }
+
+export function calcOrderTotal(cart, flowers){
+    let orderTotal = 0;
+
+    for (let j = 0; j < cart.length; j++){
+        const lineItem = cart[j];
+        const flower = findById(flowers, lineItem.id);
+        const lineTotal = calcLineTotal(lineItem.quantity, flower.price);
+        orderTotal += lineTotal;
+    }
+    return (orderTotal);
+}

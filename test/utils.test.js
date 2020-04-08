@@ -1,7 +1,8 @@
 // IMPORT MODULES under test here:
 // import example from '../src/example.js';
 import flowers from '../data/flowers.js';
-import { findById, calcLineTotal } from '../common/utils.js';
+import cart from '../data/cart.js';
+import { findById, calcLineTotal, calcOrderTotal } from '../common/utils.js';
 
 const test = QUnit.test;
 
@@ -21,7 +22,7 @@ test('finding a product by id', function(assert) {
 });
 
 
-test('getting the total', function(assert) {
+test('getting the line total', function(assert) {
     //Arrange
     // Set up your parameters and expectations
     const quantity = 2;
@@ -33,4 +34,17 @@ test('getting the total', function(assert) {
     //Assert
     // Make assertions about what is expected valid result
     assert.equal(lineTotal, expected);
+});
+
+test('calculating the order total', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+    const expected = 35.5;
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const orderTotal = calcOrderTotal(cart, flowers);
+
+    //Assert
+    // Make assertions about what is expected valid result
+    assert.equal(orderTotal, expected);
 });
