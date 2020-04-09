@@ -53,7 +53,6 @@ function renderFlowers(flowers){
         else {
             lineItem.quantity++;
         }
-// console.log(lineItem.quantity);
 
         json = JSON.stringify(cart);
         localStorage.setItem('CART', json);
