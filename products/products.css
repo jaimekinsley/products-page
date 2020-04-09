@@ -1,16 +1,17 @@
-.container {
-    width: 200px;    
-    border: solid 2px black;
-    padding: 15px;
-    
+#flowers {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-       
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .container img {
     height: 100px;
     width: 100px;
+}
+
+li {
+    border: solid 2px black;
+    padding: 10px;
+    margin: 10px;
 }
