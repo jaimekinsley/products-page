@@ -32,7 +32,7 @@ export function calcOrderTotal(cart, flowers){
     return (orderTotal);
 }
 
-export function addProduct(object){
+// export function addProduct(object){
     // retrieve existing array
     // should add a product
     // retrieve all the products
