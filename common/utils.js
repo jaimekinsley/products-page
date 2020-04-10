@@ -37,4 +37,4 @@ export function calcOrderTotal(cart, flowers){
     // should add a product
     // retrieve all the products
     // assert deep Equal the last item in the array and the supplied new product
-}
+// }
