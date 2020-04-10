@@ -28,14 +28,11 @@ myForm.addEventListener('submit', (event) => {
 
         updatedFlowers = JSON.parse(updatedFlowers);
     }
-
-    
-// push the parsed data to product
+ // push the parsed data to product
     updatedFlowers.push(product);
 
 // stringify the info you pulled from local storage 
     const stringyNewProducts = JSON.stringify(updatedFlowers);
 // set the local storage to the new string
-    localStorage.setItem('PRODUCTS', stringyNewProducts);
-   
+    localStorage.setItem('PRODUCTS', stringyNewProducts);   
 });

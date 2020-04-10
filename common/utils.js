@@ -31,3 +31,10 @@ export function calcOrderTotal(cart, flowers){
     }
     return (orderTotal);
 }
+
+export function addProduct(object){
+    // retrieve existing array
+    // should add a product
+    // retrieve all the products
+    // assert deep Equal the last item in the array and the supplied new product
+}
